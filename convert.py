@@ -109,7 +109,7 @@ def write_project(doc, row, cr, i):
     description.text = getD(row, "Description détaillée")
 
     reporting_org = newE("reporting-org", activity)
-    reporting_org.set("ref", "FR")
+    reporting_org.set("ref", "FR-6")
     reporting_org.text = "France"
 
     funding_org = newE("participating-org", activity)
