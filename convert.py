@@ -7,13 +7,21 @@ from lib import xlsx_to_csv as xtc
 import os
 from datetime import datetime
 import unicodecsv
+import unicodedata, re
 
 def ut(text):
     return text.decode('utf8')
 
+def remove_control_characters(s):
+    return "".join(ch for ch in s if unicodedata.category(ch)[0]!="C")
+
 def getD(row, column):
     # Get the data from the relevant column
-    return row[ut(column)]
+    y = row[ut(column)]
+    if type(y) == str:
+        y = y.decode("utf8", "replace")
+        y = remove_control_characters(y)
+    return y
 
 def get_files_in_dir(relative_dir):
     filenames = []
