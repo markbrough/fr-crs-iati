@@ -63,7 +63,6 @@ def make_identifier(activity, row, i):
     return iati_identifier
 
 def write_project(doc, row, cr, i):
-    getD(row, "Rubrique MAE")
 
     activity = Element("iati-activity")
     activity.set("default-currency", "EUR")
