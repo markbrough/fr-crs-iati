@@ -183,7 +183,7 @@ def convert():
             write_project(doc, row, cr, i)
 	
         print "Generated activities"
-        print "Writing activities ... (4/4)"
+        print "Writing activities ..."
 
         doc = ElementTree(doc)
         doc.write(XLSX_FILE['name']+".xml",encoding='utf-8', xml_declaration=True, pretty_print=True)
