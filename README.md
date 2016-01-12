@@ -32,9 +32,9 @@ THE SOFTWARE.
 
 1. Create a virtualenv
     ```
-     virtualenv ./pynev
-     source ./pyenv/bin/activate
-     pip install -r requirements.txt
+    virtualenv ./pynev
+    source ./pyenv/bin/activate
+    pip install -r requirements.txt
     ```
 2. Create a directory `source` and paste your Excel files there
 3. Run `./convert.py`
