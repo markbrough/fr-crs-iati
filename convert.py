@@ -115,7 +115,7 @@ def write_project(doc, row, cr, i):
     funding_org = newE("participating-org", activity)
     funding_org.set("role", "Funding")
     funding_org.set("ref", "FR")
-    funding_org.text = "France"
+    funding_org.text = "France, MAEDI"
 
     extending_org = newE("participating-org", activity)
     extending_org.set("role", "Extending")
