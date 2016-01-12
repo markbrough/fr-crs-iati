@@ -30,7 +30,8 @@ THE SOFTWARE.
 
 ## How to run
 
-1. Create a virtualenv
+1. Create a virtualenv:
+
     ```
      virtualenv ./pynev
      source ./pyenv/bin/activate
