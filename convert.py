@@ -70,6 +70,10 @@ def write_project(doc, row, cr, i):
     activity.set("last-updated-datetime", nowiso)
     doc.append(activity)
 
+    reporting_org = newE("reporting-org", activity)
+    reporting_org.set("ref", "FR-6")
+    reporting_org.text = "France, MAEDI"
+
     title = newE("title", activity)
     title.text = getD(row, "Description succinte / titre du projet")
 
