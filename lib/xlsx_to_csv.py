@@ -27,7 +27,7 @@ def getDataFromFile(f, file_contents, sheet, by_id=False):
             val = val.strftime("%d/%m/%Y")
         elif cell_type == xlrd.XL_CELL_BOOLEAN:
             val = ('FALSE', 'TRUE')[val]
-        return (sheet.cell_value(0,j).strip(), val)
+        return (sheet.cell_value(0,j).strip(), val.encode("utf8"))
 
     out = [ dict(item(i,j) for j in range(sheet.ncols)) \
         for i in range(1, sheet.nrows) ]
